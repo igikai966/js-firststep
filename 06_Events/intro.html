@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    
+</head>
+<body>
+    <h1>EVENTS</h1>
+    <p>Events are things that happen in a system tou are programming.</p>
+    <p>For example-</p>
+    <ul>
+        <li> The user selects,clicks,or hovers the cursor over a certain element</li>
+        <li>The user presses a key on the keyboard.</li>
+        <li>The user resizes or closes the browser window.</li>
+        <li>A web page finishes loading.</li>
+        <li>A form is submitted.</li>
+        <li>A video is played, paused,or ends.</li>
+        <li> An error occurs.</li>
+    </ul>
+    <p>To react to an event,,attach an <b>event handler</b> to it.</p>
+    <p>This is a block of code (usually a JS function that you create) that runs when the event fires.</p>
+    <br><br>
+    <button>Change color</button>
+
+    <script>
+        const btn=document.querySelector("button");
+
+function random(number){
+    return Math.floor(Math.random()*10 +(number +1));
+
+}
+
+btn.addEventListener("click",()=>{
+    const rndCol =`rgb(${random(255)} $ {random(255)} ${random(255)})`;
+    document.body.style.backgroundColor =rndCol;
+});
+
+    </script>
+
+
+
+    
+</body>
+</html>
