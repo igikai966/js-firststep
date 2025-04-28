@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    get the parent element
+    get the child elements
+    get siblings of an element-->
+    <h1>Get child elements:</h1>
+
+    <ul id="menu">
+        <li class="first">Home</li>
+        <li>Products</li>
+        <li class="current">Customer Support</li>
+        <li>Careers</li>
+        <li>Investors</li>
+        <li>News</li>
+        <li class="last">About us</li>
+    </ul>
+
+    <script>
+        let content=document.getElementById('menu');
+        let firstChild= content.firstElementChild;
+        console.log(firstChild);
+        let lastChild=content.lastElementChild;
+        console.log(lastChild)
+
+        let children=content.children;
+        console.log(children)
+
+        let current=document.querySelector('.current');
+        let nextSibling=current.nextElementSibling;
+    
+
+        while(nextSibling){
+            console.log(nextSibling)
+            nextSibling =nextSibling.nextElementSibling;
+        }
+
+    </script>
+
+</body>
+</html>

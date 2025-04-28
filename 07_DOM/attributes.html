@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username" secured="true">
+    <div id="main" data-progress="pending" data-value="10%"></div>
+    <script>
+        //Atrribute methods->
+        // 1> element.getAttribute(name)
+        //2> element.setAttribute(name,value)
+        //3> element.hasAttribute(name)
+        //4> element.removeAttribute(name)
+
+
+        // Note- element.attributes is a NamedNodeMap, not an Array,therefore, it has no Array methods
+        let input=document.querySelector('#username');
+
+        for(let attr of input.attributes){
+            console.log(` ${attr.name} = ${attr.value}`);
+
+        }
+        //Attribute-property synchronization
+        //When a standard attribute changes, the corresponding
+        //  property is auto-updated with some exceptions and vice versa.
+
+        let bar=document.querySelector('#main');
+        console.log(bar.dataset);
+        
+
+
+    </script>
+    
+</body>
+</html>
