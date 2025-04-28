@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ERROR HANDLING</h1>
+    <p>If a promise resolves normally, then await promise returns the result. But in the case of a rejection, it throws 
+        the error, just as if there were a throw statement at that line.</p>
+    <script>
+        async function f(){
+            await Promise.reject(new Error("Whoops!"));
+
+        }
+
+        async function f(){
+            throw new Error("Whoops!");
+        }
+        //In real situations, the promise may take some time before it rejects. 
+        // In that case there will be a delay before await throws an error.
+
+        //We can catch that error using try..catch, the same way as a regular throw:
+
+        async function f(){
+
+            try{
+                let response = await fetch(`https://no-such-url`);
+            }catch(err){
+                alert(err);
+            }
+        }
+        f();
+
+
+
+    </script>
+    
+</body>
+</html>
